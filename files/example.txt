@@ -1,0 +1,25 @@
+City1 south=City4 east=City3 west=City2
+City2 south=City8
+City3 south=City5
+City4 north=City1 south=City6 east=City5
+City5 north=City3 west=City4
+City6 north=City4 south=City9 east=City7 west=City8
+City7 south=City10 west=City6
+City8 north=City2 east=City6
+City9 north=City6 east=City10 west=City18
+City10 north=City7 east=City11 west=City9
+City11 south=City12 west=City10
+City12 north=City11 south=City13 west=City16
+City13 north=City12 east=City14
+City14 north=City15 west=City13
+City15 south=City14
+City16 south=City17 east=City12 west=City21
+City17 north=City16
+City18 south=City19 east=City9
+City19 north=City18 east=City20
+City20 east=City21 west=City19
+City21 south=City22 east=City16 west=City20
+City22 north=City21
+City23 north=City24
+City24 south=City23
+City25 south=City24
