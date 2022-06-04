@@ -12,7 +12,7 @@
             "mode": "debug",
             "program": "${workspaceRoot}/main.go",
             "env": {},
-            "args": ["-count", "10"],
+            "args": ["-c", "5"],
             "showLog": true
         }]
 }

@@ -40,3 +40,55 @@ contain numeric characters), but please add comments or assertions describing
 the assumptions you are making.
 </details>
 
+# Desing of Solution
+![desing](imgs/graphviz.png)
+
+```
+.
+├── banner
+│   ├── banner.go
+│   └── banner_test.go
+├── cmd
+│   ├── cmdConfig.go
+│   ├── cmdFlagParser.go
+│   └── cmd.go
+├── files
+│   ├── aliensNames.txt
+│   ├── aliensNew.txt
+│   ├── example.txt
+│   └── testcase1.txt
+├── go.mod
+├── go.sum
+├── imgs
+│   ├── example.png
+│   ├── graphviz.png
+│   └── test1.png
+├── LICENSE
+├── main.go
+├── models
+│   ├── edge.go
+│   ├── intruder.go
+│   └── vertex.go
+├── README.md
+├── simulator
+│   ├── builder.go
+│   ├── models
+│   │   ├── alien.go
+│   │   ├── alien_test.go
+│   │   ├── city.go
+│   │   ├── city_test.go
+│   │   ├── simConditionsFlags.go
+│   │   └── world.go
+│   ├── movemontreporter.go
+│   └── simulator.go
+└── utils
+    ├── generateRandomNames.go
+    ├── generateRandomNames_test.go
+    ├── logLevelSetter.go
+    ├── logLevelSetter_test.go
+    ├── printPretty.go
+    ├── slices.go
+    └── slices_test.go
+
+8 directories, 36 files
+```
