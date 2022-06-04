@@ -40,6 +40,20 @@ contain numeric characters), but please add comments or assertions describing
 the assumptions you are making.
 </details>
 
+# How to run the program
+
+```
+go get ./...
+
+go run main.go -c 5 
+
+```
+#### Example Output
+
+![saga1](imgs/saga1.png)
+
+![saga2](imgs/saga2.png)
+
 # Desing of Solution
 ![desing](imgs/graphviz.png)
 
