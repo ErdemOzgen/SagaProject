@@ -133,17 +133,17 @@ This is more specified for simulation.
 ```
 .
 ├── banner
-│   ├── banner.go
-│   └── banner_test.go
+│   ├── banner.go // banner string and helper functions for printing banner
+│   └── banner_test.go // test file of banners
 ├── cmd
-│   ├── cmdConfig.go
-│   ├── cmdFlagParser.go
-│   └── cmd.go
+│   ├── cmdConfig.go // Contains config parameters like Movement count of alien and number of aliens etc.
+│   ├── cmdFlagParser.go // Parse flags from commandline and check for errors
+│   └── cmd.go // main file for sim start
 ├── files
-│   ├── aliensNames.txt
-│   ├── aliensNew.txt
-│   ├── example.txt
-│   └── testcase1.txt
+│   ├── aliensNames.txt // contains random names with GenerateAlienNamesAndWriteToFile function in utils
+│   ├── aliensNew.txt // If alien count is greater than 1000 we can generate new alien names
+│   ├── example.txt // example world map for simulator can run
+│   └── testcase1.txt //same file but used for testing purpose
 ├── go.mod
 ├── go.sum
 ├── imgs
@@ -153,19 +153,19 @@ This is more specified for simulation.
 ├── LICENSE
 ├── main.go
 ├── models
-│   ├── edge.go
-│   ├── intruder.go
-│   └── vertex.go
+│   ├── edge.go // Base struct for connection in graph 
+│   ├── intruder.go // Base struct for Alien that contains invading behavior
+│   └── vertex.go // Base struct for graph node
 ├── README.md
 ├── simulator
-│   ├── builder.go
+│   ├── builder.go // Contains a lot of important functions like ReadWorldMapFile and IdentifyAliens
 │   ├── models
-│   │   ├── alien.go
+│   │   ├── alien.go  //Alien Model
 │   │   ├── alien_test.go
-│   │   ├── city.go
+│   │   ├── city.go  // City Model
 │   │   ├── city_test.go
-│   │   ├── simConditionsFlags.go
-│   │   └── world.go
+│   │   ├── simConditionsFlags.go // SimConditions for determini dead aliens and destroyed cities
+│   │   └── world.go // World Model
 │   ├── movemontreporter.go
 │   └── simulator.go
 └── utils
@@ -200,3 +200,6 @@ godoc -http=:6060
 ```
 [Localhost Documentation Link](http://localhost:6060/pkg/sagaAlienInvasion/)
 
+### Debug Configuration
+
+You can reach Debug configuration in [here](.vscode/launch.json). 
