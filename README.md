@@ -85,11 +85,9 @@ This is base struct types for city, alien and generated world map.
 
 * [Sim Models](simulator/)
   
-  1.[Alien](simulator/models/alien.go)
-  
-  2.[City](simulator/models/city.go)
-  
-  3.[World](simulator/models/world.go)
+  1. [Alien](simulator/models/alien.go)
+  2. [City](simulator/models/city.go)
+  3. [World](simulator/models/world.go)
 
 
 ### File Structure
