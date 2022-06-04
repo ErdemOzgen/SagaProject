@@ -77,19 +77,58 @@ const (
 )
 
 ```
-* [models](models/)
+* [Models](models/)
   1. [Edge](models/edge.go)
+ ```go
+//Edge type
+type Edge struct {
+	Key     string
+	Vertexs []string
+}
+```
   2. [Vertex](models/vertex.go)
+```go
+type Vertex struct {
+	Name          string
+	SimConditions map[string]bool
+	Edges         []*Edge
+	Vertexs       map[string]*Vertex
+}
+
+```
   3. [Intruder](models/intruder.go)
+```go
+type Intruder struct {
+	Name          string
+	SimConditions map[string]bool
+	Vertex        *Vertex
+}
+
+```
 This is base struct types for city, alien and generated world map.
 
 * [Sim Models](simulator/)
   
   1. [Alien](simulator/models/alien.go)
+```go
+type Alien struct {
+	models.Intruder
+	city *City
+}
+```
   2. [City](simulator/models/city.go)
+```go
+type City struct {
+	models.Vertex
+	RoadNames map[string]string
+}
+```
   3. [World](simulator/models/world.go)
+```go
+type World map[string]*City
+```
 
-
+This is more specified for simulation.
 ### File Structure
 ```
 .
