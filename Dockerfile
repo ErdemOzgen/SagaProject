@@ -10,4 +10,4 @@ RUN go build -o .
 
 EXPOSE 8000
 
-CMD ["SagaProject"]
+CMD ["sagaAlienInvasion"]
