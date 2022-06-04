@@ -78,7 +78,7 @@ const (
 
 ```
 * [Models](models/)
-  Shows model class
+ <br>
 
   1. [Edge](models/edge.go)
  ```go
@@ -110,8 +110,8 @@ type Intruder struct {
 This is base struct types for city, alien and generated world map.
 
 * [Sim Models](simulator/)
-  Shows Sim Models
-  
+  <br>
+
   1. [Alien](simulator/models/alien.go)
 ```go
 type Alien struct {
