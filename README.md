@@ -48,6 +48,26 @@ go get ./...
 go run main.go -c 5 
 
 ```
+### Docker file
+```
+docker build -t sagaaliendocker .
+```
+```dockerfile
+FROM golang
+
+WORKDIR $GOPATH/src/sagaAlienInvasion
+
+COPY . .
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+RUN go build -o .
+
+EXPOSE 8000
+
+CMD ["sagaAlienInvasion"]
+
+```
 #### Example Output
 
 ![saga1](imgs/saga1.png)
