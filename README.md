@@ -43,6 +43,53 @@ the assumptions you are making.
 # Desing of Solution
 ![desing](imgs/graphviz.png)
 
+* [simulator.Simulator](simulator/simulator.go) is where magic happens contains all required data structs to operate simulation
+```go
+
+type Simulator struct {
+	// Simulator config
+	R            *rand.Rand
+	Iteration    int
+	EndIteration int
+	// World state
+	World
+	Aliens
+	CityDefense
+}
+  ```
+* [simulator.MovError](simulator/movemontreporter.go) is data structure for collecting sim errors with detailed and more pretty
+```go
+type MovReport uint8
+
+type MovError struct {
+	reason MovReport
+}
+
+const (
+	// MovAlienDead when Alien is Dead
+	MovAlienDead MovReport = iota
+	// MovAlienTrapped when Alien is Trapped
+	MovAlienTrapped
+	// MovWorldDestroyed when World is destroyed
+	MovWorldDestroyed
+	// MovMessage when no-op
+	MovMessage = " cant move needs to invastigate %s\n"
+)
+
+```
+* [models](models/)
+  1. [Edge](models/edge.go)
+  2. [Vertex](models/vertex.go)
+  3. [Intruder](models/intruder.go)
+This is base struct types for city, alien and generated world map.
+
+* [Sim Models](simulator/)
+  1.[Alien](simulator/models/alien.go)
+  2.[City](simulator/models/city.go)
+  3.[World](simulator/models/world.go)
+
+
+### File Structure
 ```
 .
 ├── banner
@@ -96,8 +143,20 @@ the assumptions you are making.
 
 ![world1](imgs/test1.png)
 
-This one is simple fully connected graph used for PoC.
+#### This one is simple fully connected graph used for PoC.
 
 ![World2](imgs/example.png)
 
-This one has contains all test cases for the world map
+#### This one has contains all test cases for the world map
+
+### Documentation
+
+```
+go get -v  golang.org/x/tools/cmd/godoc
+
+godoc -http=:6060
+
+# http://localhost:6060/pkg/sagaAlienInvasion/
+```
+[Localhost Documentation Link](http://localhost:6060/pkg/sagaAlienInvasion/)
+
