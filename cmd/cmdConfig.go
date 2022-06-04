@@ -4,7 +4,7 @@ const (
 	// AlienMovement used if number of moves is not given
 	AlienMovement int = 10000
 	// DefaultNumberOfAliens used if number of Aliens is not otherwise specified
-	DefaultNumberOfAliens int = 0
+	DefaultNumberOfAliens int = 5
 	// DefaultWorldFile used if World file is not otherwise specified
 	DefaultWorldFile = "./files/example.txt"
 	// DefaultalienNameFile used if intel file is not otherwise specified
