@@ -78,6 +78,7 @@ const (
 
 ```
 * [Models](models/)
+  
   1. [Edge](models/edge.go)
  ```go
 //Edge type
